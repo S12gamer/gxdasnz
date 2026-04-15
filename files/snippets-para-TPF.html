@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  SNIPPETS PARA TPF.html — PWA Centro de Recursos Académicos     ║
+  ║  Copia cada bloque en la sección indicada de tu TPF.html        ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+
+  <!--
+  ════════════════════════════════════════════════════════════
+  BLOQUE 1 — Pega esto dentro de <head>, después de <title>
+  ════════════════════════════════════════════════════════════
+  -->
+
+  <!-- PWA: Vincula el manifest -->
+  <link rel="manifest" href="./manifest.json" />
+
+  <!-- PWA: Color de la barra de estado del navegador (Android) -->
+  <meta name="theme-color" content="#1a1a2e" />
+
+  <!-- ── iOS / Safari ─────────────────────────────────────────────
+       apple-mobile-web-app-capable     → Activa el modo pantalla
+                                          completa al instalarse
+       apple-mobile-web-app-status-bar  → "black-translucent" oculta
+                                          la barra de estado en iOS
+       apple-mobile-web-app-title       → Nombre que aparece bajo el
+                                          ícono en la pantalla de inicio
+       apple-touch-icon                 → Ícono para pantalla de inicio
+                                          en iPhone e iPad (usa PNG sin
+                                          esquinas redondeadas; iOS las
+                                          aplica automáticamente)
+  ─────────────────────────────────────────────────────────── -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="CentroRec" />
+  <link rel="apple-touch-icon" href="./icon.png" />
+
+  <!-- ── SEO & compatibilidad general ──────────────────────────── -->
+  <meta name="description" content="Plataforma académica con membretes, formatos, instrumentaciones y atributos de egreso." />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <!-- FIN BLOQUE 1 -->
+
+</head>
+<body>
+
+  <!-- Tu contenido HTML va aquí (no lo toques) -->
+
+  <!--
+  ════════════════════════════════════════════════════════════
+  BLOQUE 2 — Pega esto justo ANTES de </body>
+             (después de <script src="./app.js"></script>)
+  ════════════════════════════════════════════════════════════
+  -->
+  <script>
+    // ── 1. Registro del Service Worker ───────────────────────────
+    // Se registra con scope './' para cubrir toda la carpeta TPF/.
+    // El SW vive en TPF/sw.js, por lo que su scope natural ya es
+    // TPF/ — no se necesita header Service-Worker-Allowed.
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('./sw.js', { scope: './' })
+          .then((reg) => {
+            console.log('[PWA] Service Worker registrado ✓ scope:', reg.scope);
+          })
+          .catch((err) => {
+            console.warn('[PWA] Error al registrar SW:', err);
+          });
+      });
+    }
+
+    // ── 2. Banner de instalación en iOS (Safari) ─────────────────
+    // iOS no muestra un banner automático como Android.
+    // Detectamos si el usuario está en un iPhone/iPad con Safari
+    // y NO ha instalado la app todavía, y le mostramos una guía.
+    (function mostrarGuiaIOS() {
+      const esIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+      const esSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+      const yaInstalada = window.navigator.standalone === true;
+      const yaVioMensaje = sessionStorage.getItem('pwa-ios-guia-vista');
+
+      if (esIOS && esSafari && !yaInstalada && !yaVioMensaje) {
+        // Marcamos para no volver a mostrar en esta sesión
+        sessionStorage.setItem('pwa-ios-guia-vista', '1');
+
+        // Crear el toast/banner de instalación
+        const banner = document.createElement('div');
+        banner.id = 'pwa-ios-banner';
+        banner.innerHTML = `
+          <div style="
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: #1a1a2e;
+            color: #f5f0e8;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.88rem;
+            padding: 1rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.3);
+            z-index: 9999;
+            animation: slideUp 0.4s ease;
+          ">
+            <span style="font-size:1.6rem; flex-shrink:0;">📲</span>
+            <div style="flex:1; line-height:1.45;">
+              <strong style="color:#c9a84c;">Instala esta app en tu iPhone</strong><br/>
+              Toca <strong>Compartir</strong>
+              <svg style="width:16px;height:16px;vertical-align:middle;margin:0 2px;" fill="none" stroke="#c9a84c" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                <polyline points="16 6 12 2 8 6"/>
+                <line x1="12" y1="2" x2="12" y2="15"/>
+              </svg>
+              y luego <strong>"Agregar a pantalla de inicio"</strong>.
+            </div>
+            <button onclick="document.getElementById('pwa-ios-banner').remove()" style="
+              background: none; border: none; color: #c9a84c;
+              font-size: 1.4rem; cursor: pointer; flex-shrink: 0;
+              line-height: 1; padding: 0.2rem;
+            " aria-label="Cerrar">×</button>
+          </div>
+          <style>
+            @keyframes slideUp {
+              from { transform: translateY(100%); opacity: 0; }
+              to   { transform: translateY(0);    opacity: 1; }
+            }
+          </style>
+        `;
+        document.body.appendChild(banner);
+
+        // Auto-ocultar después de 12 segundos
+        setTimeout(() => {
+          const el = document.getElementById('pwa-ios-banner');
+          if (el) {
+            el.style.transition = 'opacity 0.5s';
+            el.style.opacity = '0';
+            setTimeout(() => el.remove(), 500);
+          }
+        }, 12000);
+      }
+    })();
+  </script>
+
+  <!-- FIN BLOQUE 2 -->
+
+</body>
+</html>
