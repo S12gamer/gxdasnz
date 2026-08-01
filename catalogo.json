@@ -1,0 +1,56 @@
+{
+  "Arquitectura de Computadoras": {
+    "docente": "Pérez López Juan Carlos",
+    "total_comp": 4,
+    "competencias": [
+      "Analiza la arquitectura y organización de los sistemas de cómputo.",
+      "Diseña e implementa circuitos digitales combinacionales y secuenciales.",
+      "Evalúa el desempeño de un sistema de cómputo con base en sus componentes.",
+      "Aplica principios de paralelismo y jerarquía de memoria en el diseño de sistemas."
+    ],
+    "indicadores": [
+      "A. Se adapta a situaciones y contextos complejos.",
+      "B. Hace aportaciones a las actividades académicas desarrolladas.",
+      "C. Propone y/o explica soluciones o procedimientos no vistos en clase.",
+      "D. Introduce recursos y experiencias que promueven un pensamiento crítico.",
+      "E. Incorpora conocimientos y actividades interdisciplinarias en su aprendizaje.",
+      "F. Realiza su trabajo de manera autónoma y autorregulada."
+    ]
+  },
+  "Cálculo Integral": {
+    "docente": "Ramírez Torres Ana Sofía",
+    "total_comp": 3,
+    "competencias": [
+      "Aplica los métodos de integración para la resolución de problemas.",
+      "Calcula áreas y volúmenes mediante integrales definidas.",
+      "Modela fenómenos físicos y económicos usando ecuaciones diferenciales básicas."
+    ],
+    "indicadores": [
+      "A. Se adapta a situaciones y contextos complejos.",
+      "B. Hace aportaciones a las actividades académicas desarrolladas.",
+      "C. Propone y/o explica soluciones o procedimientos no vistos en clase.",
+      "D. Introduce recursos y experiencias que promueven un pensamiento crítico.",
+      "E. Incorpora conocimientos y actividades interdisciplinarias en su aprendizaje.",
+      "F. Realiza su trabajo de manera autónoma y autorregulada."
+    ]
+  },
+  "Bases de Datos": {
+    "docente": "González Herrera Mario",
+    "total_comp": 5,
+    "competencias": [
+      "Diseña modelos entidad-relación y los normaliza correctamente.",
+      "Implementa bases de datos relacionales usando SQL estándar.",
+      "Aplica técnicas de optimización de consultas.",
+      "Administra la seguridad e integridad de la información almacenada.",
+      "Integra bases de datos con aplicaciones de software."
+    ],
+    "indicadores": [
+      "A. Se adapta a situaciones y contextos complejos.",
+      "B. Hace aportaciones a las actividades académicas desarrolladas.",
+      "C. Propone y/o explica soluciones o procedimientos no vistos en clase.",
+      "D. Introduce recursos y experiencias que promueven un pensamiento crítico.",
+      "E. Incorpora conocimientos y actividades interdisciplinarias en su aprendizaje.",
+      "F. Realiza su trabajo de manera autónoma y autorregulada."
+    ]
+  }
+}
