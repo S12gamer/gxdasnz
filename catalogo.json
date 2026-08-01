@@ -1,56 +1,212 @@
 {
   "Arquitectura de Computadoras": {
-    "docente": "Pérez López Juan Carlos",
-    "total_comp": 4,
-    "competencias": [
-      "Analiza la arquitectura y organización de los sistemas de cómputo.",
-      "Diseña e implementa circuitos digitales combinacionales y secuenciales.",
-      "Evalúa el desempeño de un sistema de cómputo con base en sus componentes.",
-      "Aplica principios de paralelismo y jerarquía de memoria en el diseño de sistemas."
-    ],
-    "indicadores": [
-      "A. Se adapta a situaciones y contextos complejos.",
-      "B. Hace aportaciones a las actividades académicas desarrolladas.",
-      "C. Propone y/o explica soluciones o procedimientos no vistos en clase.",
-      "D. Introduce recursos y experiencias que promueven un pensamiento crítico.",
-      "E. Incorpora conocimientos y actividades interdisciplinarias en su aprendizaje.",
-      "F. Realiza su trabajo de manera autónoma y autorregulada."
-    ]
-  },
-  "Cálculo Integral": {
-    "docente": "Ramírez Torres Ana Sofía",
+    "id": "arq-comp-01",
+    "docente": "Ing. Carlos Mendoza",
+    "descripcion_larga": "Estudio de la organización interna de un computador: unidades de procesamiento, jerarquía de memoria, buses y arquitecturas paralelas. El curso combina teoría con laboratorios prácticos de ensamblador y simuladores de hardware.",
+    "icono": "🖥️",
+    "tema": "mkt-teal",
+    "tags": ["Hardware", "Sistemas", "Semestre 3"],
     "total_comp": 3,
     "competencias": [
-      "Aplica los métodos de integración para la resolución de problemas.",
-      "Calcula áreas y volúmenes mediante integrales definidas.",
-      "Modela fenómenos físicos y económicos usando ecuaciones diferenciales básicas."
+      { "numero": 1, "descripcion": "Diseña y analiza arquitecturas de procesadores considerando desempeño, consumo y costo." },
+      { "numero": 2, "descripcion": "Explica la jerarquía de memoria (caché, RAM, almacenamiento secundario) y su impacto en el rendimiento." },
+      { "numero": 3, "descripcion": "Programa rutinas básicas en lenguaje ensamblador para un procesador de referencia." }
     ],
     "indicadores": [
-      "A. Se adapta a situaciones y contextos complejos.",
-      "B. Hace aportaciones a las actividades académicas desarrolladas.",
-      "C. Propone y/o explica soluciones o procedimientos no vistos en clase.",
-      "D. Introduce recursos y experiencias que promueven un pensamiento crítico.",
-      "E. Incorpora conocimientos y actividades interdisciplinarias en su aprendizaje.",
-      "F. Realiza su trabajo de manera autónoma y autorregulada."
-    ]
+      "Identifica los componentes de la CPU y su función",
+      "Aplica técnicas de pipelining y paralelismo",
+      "Calcula tiempos de acceso en distintos niveles de memoria",
+      "Depura programas simples en ensamblador"
+    ],
+    "capturas": [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800",
+      "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800",
+      "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=800"
+    ],
+    "destacado": true,
+    "banner_url": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1600",
+    "hover_gif": "https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif",
+    "estadisticas": { "creditos": 10, "horas": 5, "dificultad": 4, "tipo": "Laboratorio" },
+    "prerequisitos": ["mat-intro-01"],
+    "comunidad": { "rating_estrellas": 4.8, "alumnos_historicos": 1250, "etiqueta_reviews": "Mayormente Positivas" }
   },
-  "Bases de Datos": {
-    "docente": "González Herrera Mario",
-    "total_comp": 5,
+
+  "Programación Orientada a Objetos": {
+    "id": "poo-01",
+    "docente": "Mtra. Daniela Rangel",
+    "descripcion_larga": "Fundamentos de diseño y programación orientada a objetos: clases, herencia, polimorfismo y patrones de diseño básicos, aplicados en un lenguaje moderno mediante proyectos incrementales.",
+    "icono": "💻",
+    "tema": "mkt-purple",
+    "tags": ["Software", "Desarrollo", "Semestre 4"],
+    "total_comp": 3,
     "competencias": [
-      "Diseña modelos entidad-relación y los normaliza correctamente.",
-      "Implementa bases de datos relacionales usando SQL estándar.",
-      "Aplica técnicas de optimización de consultas.",
-      "Administra la seguridad e integridad de la información almacenada.",
-      "Integra bases de datos con aplicaciones de software."
+      { "numero": 1, "descripcion": "Modela problemas del mundo real utilizando clases, objetos y relaciones entre ellos." },
+      { "numero": 2, "descripcion": "Implementa herencia y polimorfismo para reutilizar y extender código de forma segura." },
+      { "numero": 3, "descripcion": "Aplica patrones de diseño básicos (Factory, Observer, Singleton) en proyectos pequeños." }
     ],
     "indicadores": [
-      "A. Se adapta a situaciones y contextos complejos.",
-      "B. Hace aportaciones a las actividades académicas desarrolladas.",
-      "C. Propone y/o explica soluciones o procedimientos no vistos en clase.",
-      "D. Introduce recursos y experiencias que promueven un pensamiento crítico.",
-      "E. Incorpora conocimientos y actividades interdisciplinarias en su aprendizaje.",
-      "F. Realiza su trabajo de manera autónoma y autorregulada."
+      "Diseña diagramas de clases UML correctos",
+      "Implementa encapsulamiento y modificadores de acceso",
+      "Reconoce cuándo aplicar herencia vs. composición",
+      "Entrega proyectos con pruebas unitarias básicas"
+    ],
+    "capturas": [
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800"
+    ],
+    "destacado": true,
+    "banner_url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600",
+    "hover_gif": "https://media.giphy.com/media/xUOxfjsW6WPnFxaQqE/giphy.gif",
+    "estadisticas": { "creditos": 8, "horas": 6, "dificultad": 3, "tipo": "Taller" },
+    "prerequisitos": ["prog-basica-01"],
+    "comunidad": { "rating_estrellas": 4.6, "alumnos_historicos": 2100, "etiqueta_reviews": "Extremadamente Positivas" }
+  },
+
+  "Matemáticas Discretas": {
+    "id": "mat-disc-01",
+    "docente": "Dr. Roberto Salinas",
+    "descripcion_larga": "Bases lógico-matemáticas para ciencias de la computación: lógica proposicional, teoría de conjuntos, combinatoria, grafos y relaciones de recurrencia.",
+    "icono": "📐",
+    "tema": "mkt-amber",
+    "tags": ["Matemáticas", "Fundamentos", "Semestre 2"],
+    "total_comp": 2,
+    "competencias": [
+      { "numero": 1, "descripcion": "Aplica lógica proposicional y de predicados para validar argumentos." },
+      { "numero": 2, "descripcion": "Resuelve problemas de conteo, grafos y relaciones de recurrencia." }
+    ],
+    "indicadores": [
+      "Construye tablas de verdad y demuestra equivalencias lógicas",
+      "Modela problemas mediante grafos dirigidos y no dirigidos",
+      "Resuelve recurrencias lineales simples"
+    ],
+    "capturas": [
+      "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800"
+    ],
+    "destacado": false,
+    "banner_url": "",
+    "hover_gif": "",
+    "estadisticas": { "creditos": 8, "horas": 4, "dificultad": 5, "tipo": "Teórico" },
+    "prerequisitos": [],
+    "comunidad": { "rating_estrellas": 4.1, "alumnos_historicos": 3400, "etiqueta_reviews": "Mixtas" }
+  },
+
+  "Física I": {
+    "id": "fis-01",
+    "docente": "Ing. Patricia Nava",
+    "descripcion_larga": "Mecánica clásica: cinemática, dinámica, trabajo y energía, y conservación del momento, con prácticas de laboratorio para verificar experimentalmente las leyes de Newton.",
+    "icono": "🧲",
+    "tema": "mkt-rust",
+    "tags": ["Ciencias", "Laboratorio", "Semestre 1"],
+    "total_comp": 2,
+    "competencias": [
+      { "numero": 1, "descripcion": "Analiza el movimiento de partículas usando las leyes de Newton." },
+      { "numero": 2, "descripcion": "Aplica los principios de conservación de energía y momento a sistemas mecánicos." }
+    ],
+    "indicadores": [
+      "Resuelve problemas de cinemática en una y dos dimensiones",
+      "Diseña y ejecuta experimentos de laboratorio con reporte de error",
+      "Interpreta gráficas de posición, velocidad y aceleración"
+    ],
+    "capturas": [],
+    "destacado": false,
+    "banner_url": "",
+    "hover_gif": "",
+    "estadisticas": { "creditos": 9, "horas": 5, "dificultad": 4, "tipo": "Laboratorio" },
+    "prerequisitos": [],
+    "comunidad": { "rating_estrellas": 4.3, "alumnos_historicos": 2890, "etiqueta_reviews": "Mayormente Positivas" }
+  },
+
+  "Historia Universal": {
+    "id": "hist-univ-01",
+    "docente": "Lic. Fernando Aguilar",
+    "descripcion_larga": "Recorrido por los procesos históricos que moldearon el mundo contemporáneo, desde la Revolución Industrial hasta la globalización, con énfasis en pensamiento crítico y análisis de fuentes primarias.",
+    "icono": "📜",
+    "tema": "mkt-green",
+    "tags": ["Humanidades", "Formación general"],
+    "total_comp": 2,
+    "competencias": [
+      { "numero": 1, "descripcion": "Analiza procesos históricos globales identificando causas y consecuencias." },
+      { "numero": 2, "descripcion": "Interpreta fuentes primarias y secundarias con pensamiento crítico." }
+    ],
+    "indicadores": [
+      "Elabora líneas de tiempo comparativas",
+      "Redacta ensayos argumentativos con fuentes citadas correctamente",
+      "Relaciona eventos históricos con contextos actuales"
+    ],
+    "capturas": [
+      "https://images.unsplash.com/photo-1461360370896-922624d12aa1?w=800"
+    ],
+    "destacado": false,
+    "banner_url": "",
+    "hover_gif": "",
+    "estadisticas": { "creditos": 6, "horas": 3, "dificultad": 2, "tipo": "Teórico" },
+    "prerequisitos": [],
+    "comunidad": { "rating_estrellas": 4.5, "alumnos_historicos": 4100, "etiqueta_reviews": "Mayormente Positivas" }
+  },
+
+  "Inglés Técnico": {
+    "id": "ing-tec-01",
+    "docente": "Mtra. Karen Solís",
+    "descripcion_larga": "Desarrollo de habilidades de lectura, escritura y comprensión oral en inglés, orientado a la lectura de documentación técnica, manuales y papers en el área de ingeniería.",
+    "icono": "🗣️",
+    "tema": "mkt-teal",
+    "tags": ["Idiomas", "Formación general"],
+    "total_comp": 2,
+    "competencias": [
+      { "numero": 1, "descripcion": "Comprende documentación técnica y manuales en inglés." },
+      { "numero": 2, "descripcion": "Redacta reportes técnicos breves en inglés con vocabulario especializado." }
+    ],
+    "indicadores": [
+      "Traduce términos técnicos comunes de su área",
+      "Participa en discusiones orales sobre temas técnicos",
+      "Redacta correos y reportes con estructura adecuada"
+    ],
+    "capturas": [],
+    "destacado": false,
+    "banner_url": "",
+    "hover_gif": "",
+    "estadisticas": { "creditos": 5, "horas": 3, "dificultad": 2, "tipo": "Taller" },
+    "prerequisitos": [],
+    "comunidad": { "rating_estrellas": 4.0, "alumnos_historicos": 3600, "etiqueta_reviews": "Positivas" }
+  },
+
+  "Ética Profesional": {
+    "id": "etica-prof-01",
+    "docente": "Dr. Jorge Villaseñor",
+    "descripcion_larga": "Reflexión sobre los principios éticos aplicados al ejercicio profesional: responsabilidad social, dilemas éticos en la tecnología y marcos normativos vigentes.",
+    "icono": "🧭",
+    "tema": "mkt-purple",
+    "tags": ["Humanidades", "Formación general"],
+    "total_comp": 2,
+    "competencias": [
+      { "numero": 1, "descripcion": "Analiza dilemas éticos propios del ejercicio profesional en tecnología." },
+      { "numero": 2, "descripcion": "Propone soluciones fundamentadas en marcos normativos y códigos de ética." }
+    ],
+    "indicadores": [
+      "Identifica conflictos de interés en casos reales",
+      "Argumenta posturas éticas con base en teorías normativas",
+      "Aplica códigos de ética profesional a casos de estudio"
+    ],
+    "capturas": [],
+    "destacado": false,
+    "banner_url": "",
+    "hover_gif": "",
+    "estadisticas": { "creditos": 4, "horas": 2, "dificultad": 1, "tipo": "Teórico" },
+    "prerequisitos": [],
+    "comunidad": { "rating_estrellas": 4.4, "alumnos_historicos": 1800, "etiqueta_reviews": "Mayormente Positivas" }
+  },
+
+  "Química General": {
+    "docente": "Prof. Alicia López",
+    "total_comp": 2,
+    "competencias": [
+      "Comprende la estructura atómica y los enlaces químicos",
+      "Balancea ecuaciones químicas y resuelve estequiometría básica"
+    ],
+    "indicadores": [
+      "Identifica tipos de enlaces (iónico, covalente, metálico)",
+      "Balancea ecuaciones por tanteo y por método algebraico",
+      "Calcula reactivo limitante en problemas sencillos"
     ]
   }
 }
